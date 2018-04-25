@@ -10,5 +10,11 @@ pipeline {
 				sh "${MAVEN_HOME}/bin/mvn clean package"
 			}
 		}
+		stage('Test') {
+			steps {
+				echo 'Testing..'
+				sh "${MAVEN_HOME}/bin/mvn test"
+			}
+		}
 	}
 }
